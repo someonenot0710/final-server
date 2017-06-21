@@ -1,8 +1,8 @@
 var fs = require('fs');
 var path = require('path');
 var nodemailer = require('nodemailer');
-var ses = require('nodemailer-ses-transport');
-require('../../config.js');
+// var ses = require('nodemailer-ses-transport');
+// require('../../config.js');
 
 function mail(name,mail,date,dogname,note) {
 
