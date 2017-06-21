@@ -1,8 +1,8 @@
 var fs = require('fs');
 var path = require('path');
 var nodemailer = require('nodemailer');
-// var ses = require('nodemailer-ses-transport');
-// require('../../config.js');
+var ses = require('nodemailer-ses-transport');
+require('../../config.js');
 
 function mail(name,mail,date,dogname,note) {
 
@@ -14,22 +14,22 @@ function mail(name,mail,date,dogname,note) {
 	備註：${note}
 	`;
 
-let transporter = nodemailer.createTransport({
-	service: 'gmail',
-	secure: false,
-	port: 25 ,
-	auth: {
-		user: 'love321127@gmail.com',
-		pass: 'love127321'
-	},
-	tls:{
-		rejectUnauthorized: false
-	}
-});
-// var transporter = nodemailer.createTransport(ses({
-//     accessKeyId: process.env.RDS_ID,
-//     secretAccessKey: process.env.RDS_KSE
-// }));
+// let transporter = nodemailer.createTransport({
+// 	service: 'gmail',
+// 	secure: false,
+// 	port: 25 ,
+// 	auth: {
+// 		user: 'love321127@gmail.com',
+// 		pass: 'love127321'
+// 	},
+// 	tls:{
+// 		rejectUnauthorized: false
+// 	}
+// });
+var transporter = nodemailer.createTransport(ses({
+    accessKeyId: process.env.RDS_ID,
+    secretAccessKey: process.env.RDS_KSE
+}));
 
 let HelperOptions = {
 	from: '"Jerry" <love321127@gmail.com>',
