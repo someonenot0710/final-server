@@ -18,8 +18,7 @@
     "moment": "^2.18.1",
     "nodemailer": "^4.0.1",
     "pg-promise": "^5.9.3",
-    "uuid": "^3.0.1",
-    "nodemailer-ses-transport":"^1.5.1"
+    "uuid": "^3.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
