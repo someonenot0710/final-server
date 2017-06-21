@@ -18,7 +18,7 @@ router.get('/dogs', function(req, res) {
 
 //Bath area
 router.post('/mails',function(req,res){
-  console.log("here");
+    console.log("here");
     const {name,mail,date,dogname,note} = req.body;
     mailModel.mail(name,mail,date,dogname,note);
 });
