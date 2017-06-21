@@ -33,7 +33,7 @@ var transporter = nodemailer.createTransport(ses({
 
 let HelperOptions = {
 	from: 'love321127@gmail.com',
-	to: 'creatmylife850710@gmail.com',
+	to: 'love321127@gmail.com',
 	subject: 'Hi',
 	text: context
 };
