@@ -14,26 +14,26 @@ function mail(name,mail,date,dogname,note) {
 	備註：${note}
 	`;
 
-// let transporter = nodemailer.createTransport({
-// 	service: 'gmail',
-// 	secure: false,
-// 	port: 25 ,
-// 	auth: {
-// 		user: 'love321127@gmail.com',
-// 		pass: 'love127321'
-// 	},
-// 	tls:{
-// 		rejectUnauthorized: false
-// 	}
-// });
-var transporter = nodemailer.createTransport(ses({
-    accessKeyId: process.env.RDS_ID,
-    secretAccessKey: process.env.RDS_KSE
-}));
-
+let transporter = nodemailer.createTransport({
+	service: 'gmail',
+	secure: false,
+	port: 25 ,
+	auth: {
+		user: 'love321127@gmail.com',
+		pass: 'love127321'
+	},
+	tls:{
+		rejectUnauthorized: false
+	}
+});
+// var transporter = nodemailer.createTransport(ses({
+//     accessKeyId: process.env.RDS_ID,
+//     secretAccessKey: process.env.RDS_KSE
+// }));
+//
 let HelperOptions = {
-	from: 'love321127@gmail.com',
-	to: 'love321127@gmail.com',
+	from: '"Jerry" <love321127@gmail.com>',
+	to: 'creatmylife850710@gmail.com',
 	subject: 'Hi',
 	text: context
 };
